@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .fact-display {
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .fact-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .fact-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Human Fun Facts</h1>
+        <div id="fact-display" class="fact-display">Click the button to see a fun fact!</div>
+        <button id="fact-button" class="fact-button">Show Fun Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Unique Fingerprints: Every human has a unique fingerprint, and even identical twins have different fingerprints.",
+            "Brain Power: The human brain contains approximately 86 billion neurons, making it one of the most complex structures in the universe.",
+            "DNA Similarity: Humans share about 99.9% of their DNA with every other human, highlighting our genetic similarities.",
+            "Heartbeats: The average human heart beats around 100,000 times a day, pumping about 2,000 gallons of blood.",
+            "Bone Count: At birth, humans have around 270 bones, but as they grow, some bones fuse together, resulting in 206 bones in adulthood.",
+            "Taste Buds: Humans have about 10,000 taste buds, which are replaced every two weeks, allowing us to experience a wide range of flavors.",
+            "Skin Regeneration: The human body sheds about 30,000 to 40,000 dead skin cells every minute, which adds up to around 9 pounds of skin each year.",
+            "Sleep Needs: On average, humans spend about one-third of their lives sleeping, which is essential for physical and mental health.",
+            "Lifespan: The average lifespan of a human has increased significantly over the past century, with many people living into their 80s and beyond.",
+            "Language Diversity: There are over 7,000 languages spoken around the world, showcasing the incredible diversity of human communication."
+        ];
+
+        document.getElementById('fact-button').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact-display').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
